@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitCreator {
     private fun buildService(classToCreate: Class<*>): Any? {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://5697-2a02-a31a-e045-8500-38-c9a1-e191-9267.ngrok.io/")
+            .baseUrl("https://3315-2a02-a31a-e045-8500-348a-54f4-ebca-e484.ngrok.io/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(OkHttpClient.Builder().build())
             .build()
@@ -24,5 +24,7 @@ class RetrofitCreator {
         productService = buildService(ProductService::class.java) as ProductService
         shopLocalizationService = buildService(ShopLocalizationService::class.java) as ShopLocalizationService
         userService = buildService(UserService::class.java) as UserService
+        loginDataService = buildService(LoginDataService::class.java) as LoginDataService
+        stripeService = buildService(Stripe::class.java) as Stripe
     }
 }
