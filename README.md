@@ -44,6 +44,18 @@ In addition, there is real-time synchronization between the server database (SQL
 * incorrect login or password.
 * logging in --> getting to know the product list --> product selection --> product purchase --> payment failed (lack of account funds, incorrect credit card data, etc).
 
+#### Use of HTTP methods for API (endpoints):
+
+For each model, you can use following HTTP commands. Tip: for generate https address, you can use [ngrok](https://ngrok.com/) - write in terminal:
+```bash
+./ngrok http <your_port_number> 
+```
+
+* **GET**: ***<https_address>/model_name***, ***<https_address>/***model_name/id***
+* **POST**: ***<https_address>/model_name***
+* **PUT**: ***<https_address>/model_name***, , ***<https_address>/***model_name/id***
+* **DELETE**:  ***<https_address>/model_name***, , ***<https_address>/***model_name/id***
+
 
 ## Technologies <a name="c"></a>
 
@@ -66,7 +78,7 @@ In addition, there is real-time synchronization between the server database (SQL
 
 ## Run (instructions) <a name="d"></a>
 You should prepare API keys for proper operation:
-* on the **server-side**, you will need the secret API key of [Stripe](https://stripe.com/docs/keys). You should put it in your program, creating file **Secrets.kt** with the following Object in Kotlin (and make import with this file in **OrderAndStripeRoutes.kt**): 
+* on the **server-side**, you will need the secret API key of [Stripe](https://stripe.com/docs/keys). You should put it in your program, creating file ***Secrets.kt*** with the following Object in Kotlin (and make import with this file in ***OrderAndStripeRoutes.kt***): 
 ```kotlin
 object Secrets {
     const val secretServerKey = <your_stripe_api_key_string>
@@ -113,4 +125,4 @@ You can build (and run) a server side with **Docker**, with the port *portNumber
 
 ## Status <a name="e"></a>
 
-#### The project has been completed. The only corrections required are the appearance of the user layer.
+#### The project has been completed. The only corrections required are the appearance of the UI layer.
