@@ -51,10 +51,10 @@ For each model, you can use following HTTP commands. Tip: for generate https add
 ./ngrok http <your_port_number> 
 ```
 
-* **GET**: ***<https_address>/model_name***, ***<https_address>/***model_name/id***
+* **GET**: ***<https_address>/model_name, <https_address>/model_name/id***
 * **POST**: ***<https_address>/model_name***
-* **PUT**: ***<https_address>/model_name***, , ***<https_address>/***model_name/id***
-* **DELETE**:  ***<https_address>/model_name***, , ***<https_address>/***model_name/id***
+* **PUT**: ***<https_address>/model_name, <https_address>/model_name/id***
+* **DELETE**: ***<https_address>/model_name, <https_address>/model_name/id***
 
 
 ## Technologies <a name="c"></a>
