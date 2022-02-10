@@ -28,5 +28,4 @@ fun main() {
         configureRouting()
         configureSerialization()
     }.start(wait = true)
-
 }
